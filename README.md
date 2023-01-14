@@ -1,1 +1,1 @@
-# odds-burguer-project
+# odds-burguer-app
