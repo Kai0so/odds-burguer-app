@@ -4,7 +4,7 @@ function LoginButton() {
 
   return (
     <div>
-      <button type='button'>Login</button>
+      <button type='button'>Entrar</button>
     </div>
   );
 }
