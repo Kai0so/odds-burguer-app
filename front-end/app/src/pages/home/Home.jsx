@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, HomeTemplate, RegisterButton, LoginButton, Subtitle } from '../../Components';
+import { Title, HomeTemplate, RegisterButton, LoginButton, Subtitle, OrderOptions } from '../../Components';
 
 function Home() {
   return (
@@ -9,6 +9,7 @@ function Home() {
       <Subtitle />
       <LoginButton />
       <RegisterButton />
+      <OrderOptions />
     </div>
   );
 }
