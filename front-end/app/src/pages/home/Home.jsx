@@ -1,11 +1,14 @@
 import React from 'react';
-import { Title } from '../../Components';
+import { Title, HomeTemplate, RegisterButton, LoginButton, Subtitle } from '../../Components';
 
 function Home() {
   return (
     <div>
+      <HomeTemplate />
       <Title />
-      <h2>Home Page</h2>
+      <Subtitle />
+      <LoginButton />
+      <RegisterButton />
     </div>
   );
 }
