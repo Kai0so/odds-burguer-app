@@ -4,18 +4,14 @@ function Form() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
+  const handleChange = (event, setInput) => {
+    setInput(event.target.value);
   };
 
   return (
     <div>
-      <input type="email" placeholder="Digite seu E-mail" onChange={(e) => handleEmailChange(e)} value={email} />
-      <input type="password" onChange={(e) => handlePasswordChange(e)} />
+      <input type="email" placeholder="Digite seu E-mail" onChange={(e) => handleChange(e, setEmail)} value={email} />
+      <input type="password" onChange={(e) => handleChange(e, setPassword)} />
       <button type="button">Entrar</button>
     </div>
   );
