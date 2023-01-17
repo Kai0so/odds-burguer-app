@@ -1,5 +1,7 @@
 import React from 'react';
-import { Title, HomeTemplate, RegisterButton, LoginButton, Subtitle, OrderOptions } from '../../Components';
+import {
+  Title, HomeTemplate, RegisterButton, LoginButton, Subtitle, OrderOptions,
+} from '../../Components';
 
 function Home() {
   return (
