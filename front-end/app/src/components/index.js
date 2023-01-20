@@ -6,6 +6,7 @@ import RegisterButton from './homeButtons/RegisterButton';
 import OrderOptions from './orderOptions/OrderOptions';
 import LoginForm from './loginForm/LoginForm';
 import LoginTemplate from './loginTemplate/LoginTemplate';
+import RegisterForm from './registerForm/RegisterForm';
 
 export {
   Title,
@@ -16,4 +17,5 @@ export {
   OrderOptions,
   LoginForm,
   LoginTemplate,
+  RegisterForm,
 };
