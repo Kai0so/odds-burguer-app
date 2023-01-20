@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Title, HomeTemplate, RegisterButton, LoginButton, Subtitle, OrderOptions,
-} from '../../Components';
+} from '../../components';
 
 function Home() {
   return (

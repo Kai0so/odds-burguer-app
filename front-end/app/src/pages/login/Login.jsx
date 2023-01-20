@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   RegisterButton, Subtitle, LoginForm, LoginTemplate,
-} from '../../Components';
+} from '../../components';
 
 function Login() {
   return (
