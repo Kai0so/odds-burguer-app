@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  RegisterButton, Subtitle, Form, LoginTemplate,
+  RegisterButton, Subtitle, LoginForm, LoginTemplate,
 } from '../../Components';
 
 function Login() {
@@ -8,7 +8,7 @@ function Login() {
     <div>
       <LoginTemplate />
       <Subtitle />
-      <Form />
+      <LoginForm />
       <RegisterButton />
     </div>
   );
