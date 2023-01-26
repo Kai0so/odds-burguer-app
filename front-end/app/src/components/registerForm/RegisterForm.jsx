@@ -11,12 +11,43 @@ function RegisterForm() {
 
   return (
     <div>
-      <input type="text" name="userName" onChange={(e) => handleChange(e)} />
-      <input type="number" name="age" onChange={(e) => handleChange(e)} />
-      <input type="text" name="role" onChange={(e) => handleChange(e)} />
-      <input type="email" name="email" onChange={(e) => handleChange(e)} />
-      <input type="password" name="password" onChange={(e) => handleChange(e)} />
-      <button type="button">Entrar</button>
+      <form>
+        <label htmlFor="userName">
+          Nome:
+          <input type="text" name="userName" id="userName" onChange={(e) => handleChange(e)} />
+        </label>
+        <br />
+        <label htmlFor="age">
+          Idade:
+          <input type="number" name="age" id="age" onChange={(e) => handleChange(e)} />
+        </label>
+        <br />
+        <label htmlFor="phone">
+          Telefone:
+          <input type="tel" name="phone" id="phone" onChange={(e) => handleChange(e)} />
+        </label>
+        <br />
+        <label htmlFor="email">
+          Email:
+          <input type="email" name="email" id="email" onChange={(e) => handleChange(e)} />
+        </label>
+        <br />
+        <label htmlFor="password">
+          Senha:
+          <input type="password" name="password" id="password" onChange={(e) => handleChange(e)} />
+        </label>
+        <br />
+        <label htmlFor="role">
+          Role:
+          <select name="role" id="role" onChange={(e) => handleChange(e)}>
+            <option disabled selected value>Selecione uma opção</option>
+            <option>Usuário</option>
+            <option>Administrador</option>
+          </select>
+        </label>
+        <br />
+        <button type="button">Registrar</button>
+      </form>
     </div>
   );
 }
