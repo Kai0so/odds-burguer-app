@@ -1,14 +1,14 @@
 import React from 'react';
 import {
-  RegisterButton, Subtitle, Form, LoginTemplate,
-} from '../../Components';
+  RegisterButton, Subtitle, LoginForm, LoginTemplate,
+} from '../../components';
 
 function Login() {
   return (
     <div>
       <LoginTemplate />
       <Subtitle />
-      <Form />
+      <LoginForm />
       <RegisterButton />
     </div>
   );
