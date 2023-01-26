@@ -1,10 +1,14 @@
 import React from 'react';
 import CatalogIcon from './CatalogIcon';
+import CatalogSearchbar from './CatalogSearchbar';
 
 function CatalogNavbar() {
   return (
     <div>
-      <CatalogIcon />
+      <nav>
+        <CatalogIcon />
+        <CatalogSearchbar />
+      </nav>
     </div>
   );
 }
