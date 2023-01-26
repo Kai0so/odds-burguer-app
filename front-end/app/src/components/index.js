@@ -7,6 +7,7 @@ import OrderOptions from './orderOptions/OrderOptions';
 import LoginForm from './loginForm/LoginForm';
 import LoginTemplate from './loginTemplate/LoginTemplate';
 import RegisterForm from './registerForm/RegisterForm';
+import CatalogNavbar from './catalogNavbar/CatalogNavbar';
 
 export {
   Title,
@@ -18,4 +19,5 @@ export {
   LoginForm,
   LoginTemplate,
   RegisterForm,
+  CatalogNavbar,
 };
