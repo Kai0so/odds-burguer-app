@@ -11,7 +11,7 @@ function RegisterProvider({ children }) {
 
   useEffect(() => {
     setRegisterData({
-      userName: '', age: '', email: '', password: '', role: '',
+      userName: '', email: '', password: '', role: '',
     });
   }, []);
 
