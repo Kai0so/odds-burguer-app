@@ -17,11 +17,6 @@ function RegisterForm() {
           <input type="text" name="userName" id="userName" onChange={(e) => handleChange(e)} />
         </label>
         <br />
-        <label htmlFor="age">
-          Idade:
-          <input type="number" name="age" id="age" onChange={(e) => handleChange(e)} />
-        </label>
-        <br />
         <label htmlFor="phone">
           Telefone:
           <input type="tel" name="phone" id="phone" onChange={(e) => handleChange(e)} />
