@@ -8,6 +8,8 @@ import LoginForm from './loginForm/LoginForm';
 import LoginTemplate from './loginTemplate/LoginTemplate';
 import RegisterForm from './registerForm/RegisterForm';
 import CatalogNavbar from './catalogNavbar/CatalogNavbar';
+import CatalogTemplate from './catalogTemplate/CatalogTemplate';
+import FoodCard from './catalogFoodCard/FoodCard';
 
 export {
   Title,
@@ -20,4 +22,6 @@ export {
   LoginTemplate,
   RegisterForm,
   CatalogNavbar,
+  CatalogTemplate,
+  FoodCard,
 };
