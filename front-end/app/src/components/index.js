@@ -9,7 +9,8 @@ import LoginTemplate from './loginTemplate/LoginTemplate';
 import RegisterForm from './registerForm/RegisterForm';
 import CatalogNavbar from './catalogNavbar/CatalogNavbar';
 import CatalogTemplate from './catalogTemplate/CatalogTemplate';
-import FoodCard from './catalogFoodCard/FoodCard';
+import FoodCardImage from './catalogFoodCard/FoodCardImage';
+import FoodCardDescription from './catalogFoodCard/FoodCardDescription';
 
 export {
   Title,
@@ -23,5 +24,6 @@ export {
   RegisterForm,
   CatalogNavbar,
   CatalogTemplate,
-  FoodCard,
+  FoodCardImage,
+  FoodCardDescription,
 };

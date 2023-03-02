@@ -1,9 +1,12 @@
 import React from 'react';
+import FoodCardImage from './FoodCardImage';
+import FoodCardDescription from './FoodCardDescription';
 
-function FoodCard({ cardImage }) {
+function FoodCard() {
   return (
     <div>
-      <img src={cardImage} alt="Hamburger" />
+      <FoodCardImage />
+      <FoodCardDescription />
     </div>
   );
 }
