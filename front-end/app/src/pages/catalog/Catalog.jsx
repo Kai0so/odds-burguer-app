@@ -76,6 +76,7 @@ function Catalog() {
             key={index}
             cardName={card.name}
             cardDescription={card.description}
+            cardPrice={card.price}
           />
           <div>
             <button type="button" name={card.name} disabled={counter[card.name] === 0} onClick={(event) => changeOrderCounter('-', event, card.price)}>-</button>
