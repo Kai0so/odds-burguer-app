@@ -38,7 +38,7 @@ function Catalog() {
   ];
 
   const [counter, setCounter] = useState({
-    Valete: 0, Dama: 0, Rei: 0, Às: 0, Trinca: 0, Coringa: 0,
+    Valete: 0, Dama: 0, Rei: 0, Ás: 0, Trinca: 0, Coringa: 0,
   });
 
   const changeOrderCounter = (type, event) => {
