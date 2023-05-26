@@ -1,9 +1,10 @@
 import React from 'react';
+import headerImg from '../../assets/header.jpg';
 
 function HomeTemplate() {
   return (
-    <div>
-      <img src="https://fisk.com.br/files/blog/banner-6-curiosidades-sobre-o-hamburguer.jpg" alt="Hamburgers" />
+    <div className="home-template">
+      <img src={headerImg} />
     </div>
   );
 }

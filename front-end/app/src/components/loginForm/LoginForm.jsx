@@ -9,11 +9,11 @@ function LoginForm() {
   };
 
   return (
-    <div>
-      <input type="email" placeholder="Digite seu E-mail" onChange={(e) => handleChange(e, setEmail)} value={email} />
-      <input type="password" onChange={(e) => handleChange(e, setPassword)} />
-      <button type="button">Entrar</button>
-    </div>
+    <form className='login-form'>
+      <input type="email" placeholder="E-mail ou CPF" onChange={(e) => handleChange(e, setEmail)} value={email} />
+      <input type="password" placeholder="Senha" onChange={(e) => handleChange(e, setPassword)} />
+      <button type="submit">Entrar</button>
+    </form>
   );
 }
 
