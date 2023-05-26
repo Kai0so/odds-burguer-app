@@ -1,9 +1,9 @@
 import React from 'react';
 
-function FoodCardImage({ cardImage }) {
+function FoodCardImage({ card }) {
   return (
-    <div>
-      <img src={cardImage} alt="Hamburger" />
+    <div className='catalog-card-image'>
+      <img src={card.src} alt="Hamburger" />
     </div>
   );
 }

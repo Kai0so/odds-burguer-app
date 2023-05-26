@@ -1,13 +1,40 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import FoodCardImage from './FoodCardImage';
 import FoodCardDescription from './FoodCardDescription';
+import { CartContext } from '../../context';
 
-function FoodCard() {
+function FoodCard({ card }) {
+
+  const { cart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(0);
+
+  useEffect(() => {
+    findQuantity();
+  });
+
+
+  const findQuantity = () => {
+    const finder = cart.find((e) => e.id === card.id);
+    if (finder) {
+      setQuantity(finder.quantity);
+    } else {
+      setQuantity(0);
+    }
+  }
+
+  const displayClass = quantity === 0 && "hidden";
+
+
   return (
-    <div>
-      <FoodCardImage />
-      <FoodCardDescription />
-    </div>
+    <>
+      <FoodCardImage card={card} />
+      <div className='catalog-card-description'>
+        <FoodCardDescription card={card} />
+      </div>
+      <div className={`counter ${displayClass}`}>
+        <span hidden={quantity === 0 || quantity === undefined}>{quantity}</span>
+      </div>
+    </>
   );
 }
 

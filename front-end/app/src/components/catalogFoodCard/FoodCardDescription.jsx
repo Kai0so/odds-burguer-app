@@ -1,11 +1,11 @@
 import React from 'react';
 
-function FoodCardDescription({ cardName, cardDescription, cardPrice }) {
+function FoodCardDescription({ card }) {
   return (
-    <div>
-      <h3>{cardName}</h3>
-      <h4>R${cardPrice}</h4>
-      <span>{cardDescription}</span>
+    <div className='card-description'>
+      <h2>{card.name}</h2>
+      <span>{card.description}</span>
+      <p>R${Math.abs(card.price).toFixed(2).toString().replace(".", ",")}</p>
     </div>
   );
 }
