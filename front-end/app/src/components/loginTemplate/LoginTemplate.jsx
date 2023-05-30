@@ -1,5 +1,5 @@
 import React from 'react';
-import oddsLogo from '../../assets/oddslogo2.png'
+import oddsLogo from '../../assets/oddslogo2.png';
 
 function LoginTemplate() {
   return (

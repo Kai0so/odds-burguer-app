@@ -1,11 +1,40 @@
-import React, { useContext, useEffect, useState } from "react";
-import { CartContext } from "../../context";
+import React, { useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { CartContext } from '../../context';
 import cartIcon from '../../assets/cart.png';
 
 function FoodCardCounter({ card, onClose }) {
   const [isAdd, setIsAdd] = useState(true);
   const [isDisabled, setIsDisabled] = useState(false);
-  const { addToCart, count, setCount, cart } = useContext(CartContext);
+  const {
+    addToCart, count, setCount, cart,
+  } = useContext(CartContext);
+
+  const addOrRemoveButton = () => {
+    if (cart.length > 0) {
+      const findItem = cart.find((item) => item.id === card.id);
+      if (findItem !== undefined) {
+        if (findItem.quantity > count[card.id]) {
+          setIsAdd(false);
+        } else {
+          setIsAdd(true);
+        }
+      }
+    }
+  };
+
+  const isDisabledButton = () => {
+    if (cart.length > 0) {
+      const findItem = cart.find((item) => item.id === card.id);
+      if (findItem !== undefined) {
+        if (findItem.quantity === count[card.id]) {
+          setIsDisabled(true);
+        } else setIsDisabled(false);
+      } else {
+        setIsDisabled(false);
+      }
+    }
+  };
 
   useEffect(() => {
     addOrRemoveButton();
@@ -35,43 +64,28 @@ function FoodCardCounter({ card, onClose }) {
       quantity: count[card.id] || 0,
     });
     onClose();
-  }
-
-  const addOrRemoveButton = () => {
-    if (cart.length > 0) {
-      const findItem = cart.find((item) => item.id === card.id);
-      if (findItem != undefined) {
-        if (findItem.quantity > count[card.id]) {
-          setIsAdd(false);
-        } else {
-          setIsAdd(true);
-        }
-      }
-    }
-  }
-
-  const isDisabledButton = () => {
-    if (cart.length > 0) {
-      const findItem = cart.find((item) => item.id === card.id);
-      if (findItem != undefined) {
-        if (findItem.quantity === count[card.id]) {
-          setIsDisabled(true);
-        } else
-          setIsDisabled(false);
-      } else {
-        setIsDisabled(false);
-      }
-    }
-  }
+  };
 
   return (
     <div className="food-card-counter-buttons">
-      <button className="food-decrement-button" onClick={handleDecrement} disabled={!count[card.id] || count[card.id] === 0}>-</button>
+      <button type="button" className="food-decrement-button" onClick={handleDecrement} disabled={!count[card.id] || count[card.id] === 0}>-</button>
       <span>{!count[card.id] ? 0 : count[card.id]}</span>
-      <button className="counter-increment-button" onClick={handleIncrement}>+</button>
-      <button disabled={isDisabled} className="add-button" onClick={addAndClose} type='button'><img className="cart-icon" src={cartIcon} alt="cart icon" />{isAdd === true ? "Adicionar ao Carrinho" : "Remover do carrinho"}</button>
-    </div >
+      <button type="button" className="counter-increment-button" onClick={handleIncrement}>+</button>
+      <button type="button" disabled={isDisabled} className="add-button" onClick={addAndClose}>
+        <img className="cart-icon" src={cartIcon} alt="cart icon" />
+        {isAdd === true ? 'Adicionar ao Carrinho' : 'Remover do carrinho'}
+      </button>
+    </div>
   );
 }
+
+FoodCardCounter.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  card: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    price: PropTypes.number,
+  }).isRequired,
+};
 
 export default FoodCardCounter;

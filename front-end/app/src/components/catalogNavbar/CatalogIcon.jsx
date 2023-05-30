@@ -3,7 +3,7 @@ import oddsLogo from '../../assets/oddslogo2.png';
 
 function CatalogIcon() {
   return (
-    <div className='logo'>
+    <div className="logo">
       <img src={oddsLogo} alt="ícone OddsBurguer" />
     </div>
   );

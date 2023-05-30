@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuIcon from './MenuIcon';
-import CatalogIcon from './CatalogIcon'
-import ProfileIcon from './ProfileIcon'
+import CatalogIcon from './CatalogIcon';
+import ProfileIcon from './ProfileIcon';
 
 function CatalogNavbar() {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  CatalogNavbar, CatalogTemplate, FoodCard, CatalogSearchbar, FoodModal
+  CatalogNavbar, CatalogTemplate, FoodCard, CatalogSearchbar, FoodModal,
 } from '../../components';
 import CatalogTotalValue from '../../components/catalogTotalValue/CatalogTotalValue';
 
@@ -218,23 +218,28 @@ function Catalog() {
   const handleCardClick = (card) => {
     setShowModal(true);
     setSelectedCard(card);
-  }
+  };
 
   const handleModalClose = () => {
     setShowModal(false);
     setSelectedCard({});
-  }
-
+  };
 
   return (
-    <div className='catalog-container'>
+    <div className="catalog-container">
       <CatalogNavbar />
       <CatalogTemplate />
       <CatalogSearchbar />
       <h1>Burguers</h1>
-      <div className='catalog-card-container'>
-        {cardList.map((card, index) => (
-          <div onClick={() => handleCardClick(card)} className='catalog-card'>
+      <div className="catalog-card-container">
+        {cardList.map((card) => (
+          <div
+            tabIndex={0}
+            role="button"
+            className="catalog-card"
+            onClick={() => handleCardClick(card)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCardClick(card)}
+          >
             <FoodCard
               key={card.id}
               card={card}
@@ -244,9 +249,15 @@ function Catalog() {
       </div>
       <br />
       <h1>Combos</h1>
-      <div className='catalog-card-container'>
-        {comboCardList.map((card, index) => (
-          <div onClick={() => handleCardClick(card)} className='catalog-card'>
+      <div className="catalog-card-container">
+        {comboCardList.map((card) => (
+          <div
+            tabIndex={0}
+            role="button"
+            className="catalog-card"
+            onClick={() => handleCardClick(card)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCardClick(card)}
+          >
             <FoodCard
               key={card.id}
               card={card}
@@ -256,9 +267,15 @@ function Catalog() {
       </div>
       <br />
       <h1>Porções</h1>
-      <div className='catalog-card-container'>
-        {snackCardList.map((card, index) => (
-          <div onClick={() => handleCardClick(card)} className='catalog-card'>
+      <div className="catalog-card-container">
+        {snackCardList.map((card) => (
+          <div
+            tabIndex={0}
+            role="button"
+            className="catalog-card"
+            onClick={() => handleCardClick(card)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCardClick(card)}
+          >
             <FoodCard
               key={card.id}
               card={card}
@@ -268,9 +285,15 @@ function Catalog() {
       </div>
       <br />
       <h1>Molhos</h1>
-      <div className='catalog-card-container'>
-        {sauceCardList.map((card, index) => (
-          <div onClick={() => handleCardClick(card)} className='catalog-card'>
+      <div className="catalog-card-container">
+        {sauceCardList.map((card) => (
+          <div
+            tabIndex={0}
+            role="button"
+            className="catalog-card"
+            onClick={() => handleCardClick(card)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCardClick(card)}
+          >
             <FoodCard
               key={card.id}
               card={card}
@@ -280,9 +303,15 @@ function Catalog() {
       </div>
       <br />
       <h1>Bebidas</h1>
-      <div className='catalog-card-container'>
-        {drinkCardList.map((card, index) => (
-          <div onClick={() => handleCardClick(card)} className='catalog-card'>
+      <div className="catalog-card-container">
+        {drinkCardList.map((card) => (
+          <div
+            tabIndex={0}
+            role="button"
+            className="catalog-card"
+            onClick={() => handleCardClick(card)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCardClick(card)}
+          >
             <FoodCard
               key={card.id}
               card={card}
@@ -292,9 +321,15 @@ function Catalog() {
       </div>
       <br />
       <h1>Sobremesas</h1>
-      <div className='catalog-card-container'>
-        {dessertCardList.map((card, index) => (
-          <div onClick={() => handleCardClick(card)} className='catalog-card'>
+      <div className="catalog-card-container">
+        {dessertCardList.map((card) => (
+          <div
+            tabIndex={0}
+            role="button"
+            className="catalog-card"
+            onClick={() => handleCardClick(card)}
+            onKeyDown={(e) => e.key === 'Enter' && handleCardClick(card)}
+          >
             <FoodCard
               key={card.id}
               card={card}
