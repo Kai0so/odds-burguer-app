@@ -5,7 +5,7 @@ import {
 
 function Home() {
   return (
-    <div>
+    <div className="home-container">
       <HomeTemplate />
       <Title />
       <Subtitle />

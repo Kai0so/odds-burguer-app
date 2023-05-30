@@ -1,9 +1,10 @@
 import React from 'react';
+import oddsLogo from '../../assets/oddslogo2.png';
 
 function LoginTemplate() {
   return (
-    <div>
-      <img src="https://assets.unileversolutions.com/recipes-v2/230446.jpg" alt="Hamburger" />
+    <div className="login-logo">
+      <img src={oddsLogo} alt="Hamburger" />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import RegisterContext from './RegisterContext';
 
 function RegisterProvider({ children }) {
@@ -8,12 +8,6 @@ function RegisterProvider({ children }) {
   const contextObject = useMemo(() => ({
     registerData, setRegisterData,
   }), [registerData, setRegisterData]);
-
-  useEffect(() => {
-    setRegisterData({
-      userName: '', email: '', password: '', role: '',
-    });
-  }, []);
 
   return (
     <RegisterContext.Provider value={contextObject}>

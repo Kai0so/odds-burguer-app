@@ -2,7 +2,7 @@ import React from 'react';
 
 function Title() {
   return (
-    <h1>Peça seu Odds Delivery!</h1>
+    <h1 id="title">Peça seu Odds Delivery!</h1>
   );
 }
 

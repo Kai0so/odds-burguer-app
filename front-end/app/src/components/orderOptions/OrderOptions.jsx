@@ -4,8 +4,8 @@ import WhatsappOption from './WhatsappOption';
 
 function OrderOptions() {
   return (
-    <div>
-      <span>ou peça no:</span>
+    <div className="order-options">
+      <span>Ou peça no:</span>
       <IfoodOption />
       <WhatsappOption />
     </div>

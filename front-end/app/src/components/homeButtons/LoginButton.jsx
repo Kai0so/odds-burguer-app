@@ -6,7 +6,7 @@ function LoginButton() {
 
   return (
     <div>
-      <button type="button" onClick={() => navigate('/login')}>Entrar</button>
+      <button id="login-button" type="button" onClick={() => navigate('/login')}>Entrar</button>
     </div>
   );
 }
