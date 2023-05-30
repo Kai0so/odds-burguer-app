@@ -28,7 +28,7 @@ function CartTable() {
       </tbody>
       <tfoot>
         <tr className="last-row">
-          <td colSpan={4} />
+          <td className="hidden-cols" colSpan={4} />
           <td>
             Total: R$
             {Math.abs(totalValue).toFixed(2).toString().replace('.', ',')}

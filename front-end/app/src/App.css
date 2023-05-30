@@ -357,6 +357,7 @@
   color: green;
   border-color: black;
   text-align: center;
+  height: 80px;
 }
 
 .empty-cols {
@@ -772,4 +773,9 @@ body.cart {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 20%;
+}
+
+.last-row .hidden-cols {
+  border-color: transparent;
+  background-color: transparent;
 }
